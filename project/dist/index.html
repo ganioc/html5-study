@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML5 Study</title>
+  <script src="./bundle.js">
+  </script>
+  <script type="text/javascript">
+    (function (window, document, undefined) {
+
+      // code that should be taken care of right away
+
+      window.onload = init;
+
+      function init() {
+        // the code to be called when the dom has loaded
+        // #document has its nodes
+        console.log(document.getElementById("prog"))
+
+        runProgressBar = function () {
+          var num = 0;
+          var p = document.getElementById("prog");
+          if (p) {
+            setInterval(function () {
+              num += 10;
+              if (num > 100) {
+                num = 0;
+              }
+              p.value = num;
+            }, 500)
+          }
+        }
+
+        btn_onclick = function () {
+          runProgressBar();
+        }
+      }
+
+    })(window, document, undefined);
+
+  </script>
+</head>
+<h1>Home 2
+</h1>
+
+<body>
+  <section>
+    <button id="b" onclick="btn_onclick()">Click</button>
+    <progress id="prog" max="100" value="10">
+
+    </progress><span>10</span>
+  </section>
+  <section>
+
+    <meter value="50" min="0" max="100">50/100</meter>
+  </section>
+
+</body>
+
+</html>

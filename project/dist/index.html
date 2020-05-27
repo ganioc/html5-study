@@ -35,11 +35,46 @@
         btn_onclick = function () {
           runProgressBar();
         }
+
+        showFileInfo = function () {
+          console.log('showFileInfo')
+          var file = document.getElementById("file").files[0];
+          if (file) {
+            console.log(file.type);
+          }
+        }
+
+        checkStorage = function () {
+          var val = localStorage.getItem('myname')
+          console.log('myname:', val)
+        }
+
+        setStorage = function () {
+          localStorage.setItem('myname', 'yuan')
+        };
       }
 
     })(window, document, undefined);
 
   </script>
+  <style>
+    section {
+      margin: 20px;
+    }
+
+    #djx {
+      background-color: aquamarine;
+    }
+
+    #image-boarder {
+      width: 450px;
+      padding-top: 14px;
+      padding-left: 14px;
+      padding-bottom: 14px;
+      border-width: 1px;
+      background-color: beige;
+    }
+  </style>
 </head>
 <h1>Home 2
 </h1>
@@ -54,6 +89,36 @@
   <section>
 
     <meter value="50" min="0" max="100">50/100</meter>
+  </section>
+  <section>
+    <dl>
+      <dt>title</dt>
+      <dd>Blog is a kind of personal articles management system.</dd>
+    </dl>
+  </section>
+  <section>
+    <div>
+
+      <span>选择文件</span><input type="file" id="file" /><br />
+      <input type="button" value="显示文件信息" onclick="showFileInfo();" />
+    </div>
+
+  </section>
+  <section>
+    <canvas id="djx" width="200" height="200">
+
+    </canvas>
+  </section>
+  <section>
+    <input type="button" value="check storage" onclick="checkStorage();" />
+    <input type="button" value="set storage" onclick="setStorage();" />
+  </section>
+  <section>
+    <div id="image-boarder">
+      esp32/esp-idf/components/efuse/include -I<br />
+      ompare -ggdb -Og -std=gnu99 -Wno-<br />
+      fatal error: nvs_flash.h: No such file or directory<br />
+    </div>
   </section>
 
 </body>

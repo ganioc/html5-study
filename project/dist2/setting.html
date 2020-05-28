@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>ESP32配置</title>
+  <script type="text/javascript">
+    (function (window, document, undefined) {
+      window.onload = init;
+
+      function init() {
+
+      }
+    })(window, document, undefined);
+  </script>
+  <style>
+    body {
+      text-align: center;
+      font-size: medium;
+      color: #2ca089;
+    }
+
+    footer {
+      font-size: small;
+      color: #2ca089;
+      text-align: center;
+    }
+
+    a {
+      color: aquamarine;
+    }
+
+    .form-item {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>配置界面</h3>
+  <section>
+    <form action="/setting" method="get">
+      <div class="form-item">
+        <label>CMD</label>
+        <input type="text" name="query1" id="query1" value=cmd />
+      </div>
+      <div class="form-item">
+        <label>SSID</label>
+        <input type="text" name="query2" id="query2" />
+      </div>
+      <div class="form-item">
+        <label>PASS</label>
+        <input type="text" name="query3" id="query3" />
+      </div>
+      <input type="submit" value="提交" style="width: 100px;font-size:x-large">
+    </form>
+  </section>
+  <section>
+    <p><a href="/">返回</a></p>
+  </section>
+
+</body>
+
+</html>

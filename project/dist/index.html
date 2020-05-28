@@ -58,8 +58,13 @@
 
   </script>
   <style>
+    body {
+      text-align: center;
+    }
+
     section {
       margin: 20px;
+      border: 1px dotted red;
     }
 
     #djx {
@@ -73,6 +78,37 @@
       padding-bottom: 14px;
       border-width: 1px;
       background-color: beige;
+    }
+
+    td {
+      font-size: 9pt;
+      color: #000000;
+    }
+
+    .btn_grey {
+      background-color: #eeeeee;
+      border-top: 1px solid #FFFFFF;
+      border-right: 1px solid #666666;
+      border-bottom: 1px solid #666666;
+      border-left: 1px solid #666666;
+    }
+
+    input {
+      font-size: 9pt;
+      color: #3F9;
+      border: 1px solid #999999;
+    }
+
+    [id=mr1] {
+      background-color: greenyellow;
+    }
+
+    input[type="text"]:hover {
+      background-color: #666666;
+    }
+
+    input[type="text"]:focus {
+      background-color: aquamarine;
     }
   </style>
 </head>
@@ -120,7 +156,48 @@
       fatal error: nvs_flash.h: No such file or directory<br />
     </div>
   </section>
-
+  <section>
+    <form id="form1" name="form1" method="post" action="">
+      <p>设置登录页面的格式</p>
+      <table width="413" height="129" border="1">
+        <tr>
+          <td width="91" align="right">用户</td>
+          <td width="306">
+            <div align="left">
+              <label for="textfield2"></label>
+              <input type="text" name="textfield2" id="textfield2" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div align="right">密码</div>
+          </td>
+          <td>
+            <div align="left">
+              <label for="textfield3"></label>
+              <input type="text" name="textfield3" id="textfield3" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div align="right">&nbsp;</div>
+          </td>
+          <td>
+            <div align="left">
+              <input name="button" type="submit" id="button" class="btn_grey" value="提交" />
+              <input name="button2" type="reset" id="button2" class="btn-grey" value="重置" />
+            </div>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </section>
+  <section>
+    <div id="mr1">编程图书</div>
+    <div id="mr1-1">php编程</div>
+  </section>
 </body>
 
 </html>
